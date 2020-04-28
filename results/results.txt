@@ -1,0 +1,3 @@
+X string: 101 Y string: 0 S string: 100010101
+100010101 is interleaved of 101 and 0
+Total number of comparisons is: 74
