@@ -1,7 +1,20 @@
 import argparse
 import sys
-
+# Global vairable used for trace output runs
 numComparisions = 0
+
+#
+#@Brief - Will determine if S is an interleaving of
+# strings X and Y
+#
+#@Param[in] X - One of the potential interleaving strings
+#@Param[in] Y - One of the potential interleaving strings
+#@Param[in] S - The main string to determine if the string is 
+# interleaving
+#
+#@Return bool - True if S is an interleaving of X and Y
+# false otherwise
+#
 def isInterleaved(X, Y, S):
     #Need at least 2 of X and Y for this to be true
     global numComparisions
@@ -46,6 +59,14 @@ def isInterleaved(X, Y, S):
         if (len(S) == (i * len(X) + j * len(Y)) and opt[i*len(X)][j*len(Y)] == True):
           return True
     return False 
+
+#
+#@Brief sets up the inputs and trace writing for the program
+#Will create and write trace output to the results folder.
+#
+#@param[in] arg - Name of the input file to parse
+#
+#@return void
 
 def test(arg):
     f=open(str(arg), "r")
