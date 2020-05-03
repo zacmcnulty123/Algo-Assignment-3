@@ -79,6 +79,8 @@ def test(arg):
     Y = st[1]
     S = st[2]
     r.write("X string: " + X + " Y string: " + Y + " S string: " + S + "\n")
+    r.write("The length of S is: " + str(len(S)) + "\n")
+    print("The length of S is: " + str(len(S)) + "\n")
     if (isInterleaved(X, Y, S)):
         r.write(S+ " is interleaved of "+ X + " and "+ Y + "\n")
         print(S, "is interleaved of", X, "and", Y)
@@ -87,6 +89,7 @@ def test(arg):
         print(S, "is not interleaved of", X, "and", Y)
     r.write("Total number of comparisons is: "  + str(numComparisions) + "\n")
     r.close() 
+    print("Trace run results are in results/results.txt")
 parser = argparse.ArgumentParser()
 parser.add_argument("-il", help="Determines if string is an interleaving of two other strings", type=test, action="store")
 
@@ -94,4 +97,3 @@ if len(sys.argv) <= 1:
   sys.argv.append('--help')
 
 options = parser.parse_args()
-# if __name__ == '__m
