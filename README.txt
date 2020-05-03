@@ -13,3 +13,5 @@ x-String y-string s-string
 
 The Python script will print whether or not the S is an intelreaving of X and Y But
 the results of the trace runs will be put into the results folder.
+
+The makeInterleavedInput.py will create interleavedInput solely for the purpose of timing based runs.
